@@ -1,9 +1,12 @@
 import React from "react";
+import BaseLayout from "./BaseLayout";
 
 const PageNotFound = () => {
   return (
     <div>
-      <h1>{"404"}</h1>
+      <BaseLayout>
+        <h1>{"404"}</h1>
+      </BaseLayout>
     </div>
   );
 };

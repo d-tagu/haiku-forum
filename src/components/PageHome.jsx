@@ -1,9 +1,12 @@
 import React from 'react'
+import BaseLayout from './BaseLayout'
 
 const PageHome = () => {
   return (
     <div>
-      <h1>{'Home'}</h1>
+      <BaseLayout>
+        <h1>{'Home'}</h1>
+      </BaseLayout>
     </div>
   )
 }

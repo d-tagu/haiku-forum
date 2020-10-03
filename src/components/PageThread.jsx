@@ -1,9 +1,12 @@
 import React from "react";
+import BaseLayout from "./BaseLayout";
 
 const PageThread = () => {
   return (
     <div>
-      <h1>{"Thread"}</h1>
+      <BaseLayout>
+        <h1>{"Thread"}</h1>
+      </BaseLayout>
     </div>
   );
 };
