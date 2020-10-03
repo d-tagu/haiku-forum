@@ -1,0 +1,29 @@
+import React from 'react'
+import { Card, CardContent, Typography } from '@material-ui/core'
+import { makeStyles } from '@material-ui/styles'
+import { Link } from 'react-router-dom'
+
+const CardThread = ({ thread }) => {
+  const classes = useStyles()
+
+  return (
+    <Card>
+      <Link to={`/threads/${thread.id}`}>
+        <CardContent className={classes.content}>
+          <Typography variant={'h6'}>
+            {`${thread.title} (投稿数: ${thread.responseCount})`}
+          </Typography>
+          <Typography variant={'caption'}>
+            {thread.updatedAt.toDate().toLocaleString()}
+          </Typography>
+        </CardContent>
+      </Link>
+    </Card>
+  )
+}
+
+const useStyles = makeStyles(({ spacing }) => {
+  return { content: { display: 'grid', gridRowGap: spacing(1) } }
+})
+
+export default CardThread
